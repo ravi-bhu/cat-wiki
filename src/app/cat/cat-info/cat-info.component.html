@@ -1,0 +1,42 @@
+<ng-container *ngIf="cat$ | async as cat">
+  <div class="container">
+    <img [src]="thumbnail$ | async" alt="cat pic" class="pic-card thumbnail" />
+    <div>
+      <h1 class="cat-name">{{ cat.name }}</h1>
+      <p class="description">{{ cat.description }}</p>
+      <div class="cat-info">
+        <strong>Temperament: </strong>
+        <p>{{ cat.temperament }}</p>
+        <strong>Origin: </strong>
+        <p>{{ cat.origin }}</p>
+        <strong>Life Span: </strong>
+        <p>{{ cat.lifeSpan }} years</p>
+        <strong>Adaptability: </strong>
+        <app-rating [rating]="cat.rating.adaptability"></app-rating>
+        <strong>Affection Level: </strong>
+        <app-rating [rating]="cat.rating.affectionLevel"></app-rating>
+        <strong>Child Friendly: </strong>
+        <app-rating [rating]="cat.rating.childFriendly"></app-rating>
+        <strong>Grooming: </strong>
+        <app-rating [rating]="cat.rating.grooming"></app-rating>
+        <strong>Intelligence: </strong>
+        <app-rating [rating]="cat.rating.intelligence"></app-rating>
+        <strong>Health Issues: </strong>
+        <app-rating [rating]="cat.rating.healthIssues"></app-rating>
+        <strong>Social Needs: </strong>
+        <app-rating [rating]="cat.rating.socialNeeds"></app-rating>
+        <strong>Stranger Friendly: </strong>
+        <app-rating [rating]="cat.rating.strangerFriendly"></app-rating>
+      </div>
+    </div>
+  </div>
+
+  <h1>Other Photos</h1>
+  <div class="pictures">
+    <img
+      *ngFor="let picture of pictures$ | async"
+      [src]="picture"
+      alt="cat pic"
+    />
+  </div>
+</ng-container>

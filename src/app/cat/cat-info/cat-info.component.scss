@@ -1,0 +1,39 @@
+h1 {
+  margin: 0;
+}
+.thumbnail {
+  width: 20rem;
+  height: 20rem;
+  justify-self: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.cat-name .description {
+  color: var(--clr-text-primary);
+}
+.pictures {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  img {
+    width: 17.375rem;
+    height: 17.375rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+}
+
+.cat-info {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 1.8rem;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}

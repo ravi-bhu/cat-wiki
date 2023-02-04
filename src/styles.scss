@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-light-gray: #e3e1dc;
+  --clr-text-primary: #291507;
+  --clr-rating-enabled: #544439;
+  --clr-rating-disabled: #e0e0e0;
+  --logo-width: 128px;
+  --logo-height: 43px;
+  --img-hero-lg: "assests/img/HeroImagelg.png";
+  --img-hero-md: "assests/img/HeroImagemd.png";
+  --img-hero-sm: "assests/img/HeroImagesm.png";
+  --pad-left-main: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem 4rem;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  display: inline-block;
+  width: var(--logo-width);
+  height: var(--logo-height);
+  mask-size: cover;
+  mask: url("assets/img/CatwikiLogo.svg");
+}
+
+.logo--white {
+  background-color: var(--clr-white);
+}
+
+.logo--black {
+  background-color: var(--clr-black);
+}
+
+.pic-card {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}

@@ -1,0 +1,96 @@
+app-header {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero {
+  background: url("../../assets/img/HeroImagelg.png") no-repeat center center;
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  color: var(--clr-white);
+
+  > div {
+    width: 50%;
+    padding: var(--pad-left-main);
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 1.125rem;
+  }
+}
+
+.big-card {
+  border-radius: 2.5rem;
+  background-color: var(--clr-light-gray);
+  color: var(--clr-text-primary);
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 13.75rem;
+    height: 13.75rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    cursor: pointer;
+  }
+
+  figcaption {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+}
+
+.discover-breeds {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.most-searched {
+  padding-inline: var(--pad-left-main);
+  p {
+    font-weight: 700;
+  }
+}
+
+.reason {
+  padding-left: var(--pad-left-main);
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    color: var(--clr-text-primary);
+  }
+}
+
+.discover-breeds > p {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.box-container {
+  display: flex;
+  gap: 2rem;
+  transform: scale(0.75);
+
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end;
+  }
+}

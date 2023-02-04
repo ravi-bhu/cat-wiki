@@ -1,0 +1,46 @@
+<div class="big-card">
+  <div class="hero">
+    <div>
+      <span class="logo logo--white"></span>
+      <p>Get to know more about your cat breed</p>
+      <input placeholder="Enter your breed" type="text" />
+    </div>
+  </div>
+  <div class="most-searched">
+    <h6>Most Searched Breeds</h6>
+    <div class="discover-breeds">
+      <p>66+ Breeds for you to discover</p>
+      <a routerLink="/cat/top">See more</a>
+    </div>
+    <div class="pictures">
+      <figure
+        *ngFor="let cat of mostSearchedBreeds$ | async"
+        [queryParams]="{ imageId: cat.id }"
+        [routerLink]="['cat', 'breed', cat.breed]"
+      >
+        <img [alt]="cat.name" [src]="cat.imageUrl" class="skeleton" />
+        <figcaption>{{ cat.name }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="reason">
+  <div class="reason-text">
+    <h1>Why should you have a cat</h1>
+    <p>
+      Having a cat around you can actually trigger the release of calming
+      chemicals in your body which can lower your stress and anxiety
+    </p>
+    <a href="#">Read More</a>
+  </div>
+
+  <div class="box-container">
+    <div class="first-container">
+      <img alt="Cat 2" class="first" src="assets/img/image%202.png" />
+      <img alt="Cat 1" class="second" src="../../assets/img/image%201.png" />
+    </div>
+    <div class="second-container">
+      <img alt="Cat 3" class="third" src="assets/img/image%203.png" />
+    </div>
+  </div>
+</div>
